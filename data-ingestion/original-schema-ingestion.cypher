@@ -133,7 +133,7 @@ SET
     r.any_padro = any_padro;
 
 
-// 4. Load FAMILIA residence relationships
+// 4. Load FAMILIA family relationships
 LOAD CSV WITH HEADERS FROM 'file:///FAMILIA.csv' AS row
 WITH row
 WHERE row.ID_1 IS NOT NULL
@@ -163,7 +163,7 @@ SET
         END;
 
 
-// 5. Load SAME_AS residence relationships
+// 5. Load SAME_AS identity-link relationships
 LOAD CSV WITH HEADERS FROM 'file:///SAME_AS.csv' AS row
 WITH row
 WHERE row.Id_A IS NOT NULL
